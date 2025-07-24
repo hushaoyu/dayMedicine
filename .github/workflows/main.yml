@@ -12,5 +12,5 @@ jobs:
         run: |
           # 示例：使用 curl 发送微信提醒（Server酱）
           curl -X POST \
-            -d "text=下午 2:30 提醒：按时吃药！" \
+            -d "text=【待办提醒】今日任务&desp=**任务列表**：\n1. 按时吃药\n\n**截止时间**：今天 15:30" \
             "https://sctapi.ftqq.com/SCT290616Td6s0UP5Iu1ZatQ2TER02Cuai.send"
