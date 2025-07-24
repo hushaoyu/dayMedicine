@@ -1,0 +1,16 @@
+name: Daily Reminder at 14:30 (UTC+8)
+on:
+  schedule:
+    - cron: '30 6 * * *'  # 北京时间 14:30
+  workflow_dispatch:  # 可选：支持手动触发
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        run: |
+          # 示例：使用 curl 发送微信提醒（Server酱）
+          curl -X POST \
+            -d "text=下午 2:30 提醒：按时吃药！" \
+            "https://sctapi.ftqq.com/SCT290616Td6s0UP5Iu1ZatQ2TER02Cuai.send"
